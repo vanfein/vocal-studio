@@ -1,0 +1,450 @@
+@import "sprite.less";
+@import "mixin.less";
+@import "base.less";
+
+
+
+
+body {
+
+}
+
+.reset {
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-marker {
+    list-style-type: none;
+}
+
+.wrap {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 15px 45px;
+    background-color: @color_brown;
+    color: #f0eaee;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Open sans';
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn-narrow {
+    padding: 15px 25px;
+}
+
+.pink-bg {
+    background-color: @color_pinky;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+header {
+    z-index: 2;
+    min-height: 90px;
+
+    padding: 5px 0px;
+    font-size: 0px;
+    text-align: right;
+}
+
+/* Clearing basic styles */
+
+/* navigation and logo*/
+.logo {
+    display: inline-block;
+    position: absolute;
+
+    left: 0px;
+
+}
+
+.main-nav {
+    display: inline-block;
+    font-size: 0px;
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 25px;
+}
+
+.main-nav-list {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    text-align: right;
+
+}
+
+.main-nav-item {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+
+    &::before {
+        content: "~";
+        margin-right: 9px;
+color:#9a9a9a;
+
+    }
+    &:first-child::before {
+        content: "";
+        display: none;
+    }
+}
+
+.nav-link {
+    color: #9a9a9a;
+    text-decoration: none;
+}
+/* first slider */
+.main-slider {
+    z-index: 1;
+    height: 700px;
+    padding-top: 235px;
+    background-color: #000000;
+
+}
+.slider-h {
+    font-family: 'Open sans';
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 60px;
+    color: #ffffff;
+
+}
+
+.slider-text {
+    color: #999999;
+    margin-bottom: 130px;
+}
+
+.slider-quote {
+    color: #999999;
+}
+
+.content {
+    font-size: 0px;
+    padding: 50px;
+}
+/* about block */
+
+.about {
+    vertical-align: top;
+}
+
+.about_h {
+    margin-bottom: 35px;
+}
+
+.about_text {
+    display: inline-block;
+    width: 616px;
+    margin-right: 66px;
+    vertical-align: top;
+    text-align: right;
+}
+
+.about_p {
+    margin-bottom: 35px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.about_image {
+    display: inline-block;
+    width: 458px;
+    min-height: 400px;
+    background-image: url(../img/about.jpg);
+}
+
+.about-image_shadow {
+    z-index: -1;
+    position: absolute;
+    top: 40px;
+    left: -30px;
+    height: 388px;
+    width: 876px;
+    background-color: @color_pinky;
+}
+
+.about_list {
+    margin: 0px 0px 47px 0px;
+    padding-left: 20px;
+    font-size: 18px;
+    list-style-type: none;
+    text-align: left;
+    line-height: 27px;
+}
+
+.about_list li {
+    margin: 0;
+
+    &::before {
+        content: "-";
+        padding-right: 5px;
+    }
+}
+
+/*video-slider */
+
+.video-slider {
+    width: inherit;
+    height: 303px;
+    margin-top: 106px;
+    background-color: @color_rose;
+}
+
+/*order a concert*/
+.order {
+    width: inherit;
+    margin-top: 130px;
+    text-align: right;
+}
+
+.order_text {
+    margin-top: 66px;
+    margin-right: -70px;
+    width: 620px;
+    min-height: 484px;
+    padding: 55px 65px;
+    display: inline-block;
+    background-color: @color_pinky;
+    text-align: left;
+}
+
+.order_text h3 {
+    margin-bottom: 0;
+}
+
+.order-description {
+    margin-top: 35px;
+    margin-bottom: 0;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.order-cost {
+    margin-bottom: 45px;
+    padding-right: 40px;
+    font-size: 24px;
+    font-style: italic;
+    text-align: right;
+}
+
+.order-image {
+    position: absolute;
+    top: 0;
+    left: -375px;
+    z-index: -1;
+    width: 1545px;
+    height: 520px;
+    background-image: url(../img/order.jpg);
+}
+/* education */
+
+.edu_description {
+    font-size: 0px;
+}
+
+.edu-description_item {
+    min-height: 180px;
+}
+
+.edu-icons {
+    display: inline-block;
+    width: 38px;
+    vertical-align: top;
+    margin-top: 65px;
+}
+
+.icon {
+    display: inline-block;
+    width: 38px;
+    height: 43px;
+
+}
+
+.icon-mic {
+    .sprite( @mic);
+}
+
+.icon-mic2 {
+    .sprite( @mic2);
+
+}
+
+.icon-home {
+    .sprite( @home);
+}
+
+.description_item-name {
+    display: inline-block;
+    width: 476px;
+    padding-top: 73px;
+    vertical-align: top;
+}
+
+.edu-name {
+    display: inline-block;
+    margin-left: 65px;
+    font-size: 24px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.description_item-hour {
+    display: inline-block;
+    width: 265px;
+    padding-top: 73px;
+    vertical-align: top;
+}
+
+.edu-description-bg {
+    position: absolute;
+    top: 0;
+    left: -390px;
+    width: 1920px;
+    min-height: 180px;
+    background-color: @color_pinky;
+}
+
+.hour-cost {
+    font-size: 24px;
+}
+
+.description_item-cost {
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: top;
+}
+
+.edu_cost-list {
+    margin-top: 35px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.edu_list-right {
+    margin-left: 60px;
+    text-align: right;
+}
+
+/* enroll */
+
+.enroll {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.enroll_text {
+    display: inline-block;
+    width: 815px;
+    min-height: 105px;
+    margin-right: 60px;
+    font-size: 36px;
+    line-height: 42px;
+    font-family: 'Marck Script', sans-serif;
+}
+
+/* structure of trainings */
+
+.training-struct {
+    font-size: 0px;
+}
+
+.struct-description {
+    display: inline-block;
+    width: 477px;
+    min-height: 342px;
+    padding: 50px 0px;
+    vertical-align: top;
+}
+
+.struct-preferences {
+    display: inline-block;
+    width: 663px;
+    min-height: 342px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 60px;
+    vertical-align: top;
+}
+
+.struct-description_bg {
+    z-index: -2;
+    position: absolute;
+    left: -79px;
+    top: 0;
+    width: 1607px;
+    min-height: 374px;
+    background-color: @color_pinky;
+}
+
+.struct-preferences_bg {
+    z-index: -1;
+    top: -22px;
+    left: 0;
+    width: 1053px;
+    min-height: 370px;
+    background-color: #e4d8dc;
+    position: absolute;
+
+}
+
+.preferenses_list {
+    padding-left: 44px;
+}
+
+.struct-h {
+    margin-bottom: 30px;
+}
+
+.struct-list {
+    list-style-type: none;
+
+}
+
+.struct-list li {
+    margin: 8px 0;
+
+    &::before {
+        content: "~";
+        padding-right: 5px;
+    }
+}
+
+.footer {
+    padding: 20px;
+    background: #d1d1d1;
+}
+
+/* Contact icons */
+.vk {
+    &::before {
+        content: "";
+        height: 33px;
+        width: 30px;
+        //.sprite( @vk);
+    }
+}
+
+.content__title {
+
+}

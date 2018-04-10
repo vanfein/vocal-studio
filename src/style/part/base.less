@@ -1,0 +1,193 @@
+//переменные
+@font: 'Open Sans', sans-serif;
+@font-title: 'Open Sans', sans-serif;
+@font-alt: 'Trebuchet MS', serif;
+
+@color_white: #fff;
+@color_text: #353131;
+@color_link: #3c3636;
+@color_blue: #003777;
+@color_grey: #eaeaea;
+@color_brown: #6a4e4d;
+@color_pinky: #f9f1f2;
+@color_rose: #b8999f;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    word-spacing: normal;
+}
+
+div {
+    position: relative;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    position: relative;
+    font-family: @font;
+    margin: 0;
+    padding: 0;
+    background: @color_white;
+    color: @color_text;
+}
+
+img {
+    border: none;
+}
+
+p {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    line-height: 26px;
+}
+
+a {
+    color: @color_link;
+    outline: none;
+    transition: all 0.2s;
+}
+
+button {
+    transition: all 0.2s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.head (@font-size, @margin-bottom, @line-height: normal, @color) {
+    font-size: @font-size;
+    margin: 0 0 @margin-bottom 0;
+    line-height: @line-height;
+    color: @color;
+}
+
+h1 {
+    .head(25px, 30px, normal, @color_text);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h2 {
+    .head(56px, 84px, normal, @color_text);
+    font-family: 'Marck Script', sans-serif;
+    font-weight: 400;
+}
+
+h3 {
+    .head(50px, 50px, normal, @color_text);
+    font-family: 'Marck Script', sans-serif;
+    font-weight: 400;
+}
+
+h4 {
+    .head(38px, 57px, normal, @color_text);
+    font-family: 'Marck Script', sans-serif;
+    font-weight: 400;
+}
+
+h5 {
+    .head(13px, 15px, normal, @color_text);
+    font-weight: 700;
+}
+
+
+table{
+    border-collapse:collapse;
+}
+
+.table {
+    width: 100%;
+    td{
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    th {
+        padding: 10px;
+        text-align: left;
+        background: #ddd;
+        border: 1px solid #aaa;
+    }
+}
+
+
+blockquote {
+    padding: 10px 20px;
+    background: #ddd;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+ul, ol{
+    margin:0 0 25px 0px;
+    padding: 0 0 0 30px;
+    ul, ol {
+        margin: 10px ;
+    }
+}
+ul li, ol li{
+    font-size: 18px;
+    margin-bottom:5px;
+}
+
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+
+/*базовые стили обертки модалок*/
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: none;
+    overflow: auto;
+}
+
+.modal {
+    width: 560px;
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    margin-left: -280px;
+    background: #fff;
+    padding: 40px 40px;
+    display: none;
+}
+
+.modal--fz  {             // во весь экран
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    padding: 0;
+    display: none;
+    margin: 0;
+}
+
+.j-noScroll {
+    overflow: hidden;
+}
